@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="shortcut icon" href="https://www.svgrepo.com/show/75981/aim.svg">    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <title>Urna Eletrônica</title>
+    </head>
+    <body>
+        <div class="botoes-controle">
+            <input type="button" class="btn btn-primary ms-3" value="Iniciar Votação" onclick="comecarEtapa()"/>
+            <input type="button" class="btn btn-primary ms-3" value="Imprimir Votos" onclick="imprimirContagem()"/>
+        </div>
+        <div class="urna">
+            <div class="tela">
+                <div class="tela-1">
+                    <div class="tela-1-1">
+                        <div class="tela-1-1-1">
+                            <span>SEU VOTO PARA</span>
+                        </div>
+                        <div class="tela-1-1-2">
+                            <label id="cargo"></label>
+                        </div>
+                        <div class="tela-1-1-3"></div>
+                        <div class="tela-1-1-4"></div>
+                    </div>
+                    <div class="tela-1-2">
+                        <div id="foto-candidato" class="tela-1-2-img"></div>
+                        <div id="foto-vice" class="tela-1-2-img vice"></div>
+                    </div>
+                </div>
+                <div class="tela-2">
+                    <span>Aperte a tecla:</span></br>
+                    <span>VERDE para CONFIRMAR este voto</span></br>
+                    <span>LARANJA para REINICIAR este voto</span>
+                </div>
+                <div class="tela-fim">
+                    <label>FIM</label>
+                </div>
+            </div>
+            <div class="teclado">
+                <div class="teclado-linha">
+                    <input type="button" class="teclado-botao" value="1" onclick="clicou(this.value)"/>
+                    <input type="button" class="teclado-botao" value="2" onclick="clicou(this.value)"/>
+                    <input type="button" class="teclado-botao" value="3" onclick="clicou(this.value)"/>
+                </div>
+                <div class="teclado-linha">
+                    <input type="button" class="teclado-botao" value="4" onclick="clicou(this.value)"/>
+                    <input type="button" class="teclado-botao" value="5" onclick="clicou(this.value)"/>
+                    <input type="button" class="teclado-botao" value="6" onclick="clicou(this.value)"/>
+                </div>
+                <div class="teclado-linha">
+                    <input type="button" class="teclado-botao" value="7" onclick="clicou(this.value)"/>
+                    <input type="button" class="teclado-botao" value="8" onclick="clicou(this.value)"/>
+                    <input type="button" class="teclado-botao" value="9" onclick="clicou(this.value)"/>
+                </div>
+                <div class="teclado-linha">
+                    <input type="button" class="teclado-botao" value="0" onclick="clicou(this.value)"/>
+                </div>
+                <div class="teclado-linha">
+                    <input type="button" class="teclado-botao botao-branco" value="BRANCO" onclick="branco()"/>
+                    <input type="button" class="teclado-botao botao-corrige" value="CORRIGE" onclick="corrige()"/>
+                    <input type="button" class="teclado-botao botao-confirma" value="CONFIRMA" onclick="confirma()"/>
+                </div>
+            </div>
+        </div>
+        <div class="tabela-votos container mt-3">
+            <table class="table">
+                <tbody id="votos-corpo"></tbody>
+            </table>
+        </div>
+        <script type="text/javascript" src="etapas.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="impressao.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    </body>
+</html>
